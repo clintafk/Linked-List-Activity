@@ -68,7 +68,7 @@ public class Main {
           System.out.println("Wrong number entered!");
           break;
       }
-      System.out.print("Press any key to continue...");
+      System.out.print("Press enter to continue...");
       br.readLine();                  
     }
   }
