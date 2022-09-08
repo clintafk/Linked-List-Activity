@@ -1,3 +1,7 @@
+/*
+ * CC 13 - Singly Linked List
+ * Output by Clint Harvey Gamolo and Adriane Troy V. Roa
+ */
 public class IntSLLNode {
 	public int info;
 	public IntSLLNode next;

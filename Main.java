@@ -1,3 +1,7 @@
+/*
+ * CC 13 - Singly Linked List
+ * Output by Clint Harvey Gamolo and Adriane Troy V. Roa
+ */
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,6 +11,7 @@ public class Main {
     IntSLList slList = new IntSLList(); 
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
     while(true) {
+        System.out.println();
         System.out.print("""
           0 -  Exit 
           1 - Add to head  
@@ -26,26 +31,37 @@ public class Main {
           System.exit(0);
           break;
         case 1:
-          System.out.println("Enter value to add to head of list: ");         
+          System.out.println("Enter value to add to head of list: ");
+          int choice = Integer.parseInt(br.readLine());
+          slList.addToHead(choice);
+          System.out.println(choice + " is successfully added to the head!");
           break;
         case 2:
-          System.out.println("Enter value to add to tail of list: ");         
-          userChoice = Integer.parseInt(br.readLine());
-          slList.addToTail(userChoice);
-          System.out.println(userChoice + " is successfully added to the tail!");
+          System.out.println("Enter value to add to tail of list: ");
+          choice = Integer.parseInt(br.readLine());
+          slList.addToTail(choice);
+          System.out.println(choice + " is successfully added to the tail!");
           break;
         case 3:
+          int x = slList.deleteFromHead();
+          System.out.println(x + " deleted from head successfully!");
           break;
         case 4:
-          int x = slList.deleteFromTail();
+          x = slList.deleteFromTail();
           System.out.println(x + " deleted from tail successfully!");
           break;
         case 5:
+          System.out.println("Enter value to check: ");
+          choice = Integer.parseInt(br.readLine());
+          if(slList.isInList(choice)) System.out.println(choice+" is in list.");
+          else System.out.println(choice+" is not in list.");
           break;
         case 6:
+          System.out.println("Enter value to delete:");
+          choice = Integer.parseInt(br.readLine());
+          slList.delete(choice);
           break;
         case 7:
-          System.out.print("Values in list: ");
           slList.printAll();
           break;
       }
