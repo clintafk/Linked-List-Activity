@@ -64,7 +64,12 @@ public class Main {
         case 7:
           slList.printAll();
           break;
+        default:
+          System.out.println("Wrong number entered!");
+          break;
       }
+      System.out.print("Press any key to continue...");
+      br.readLine();                  
     }
   }
 }
